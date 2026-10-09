@@ -22,7 +22,11 @@
 - **핵심 구현:** Embedded C · GPIO · ADC · PWM · LPIT, 제어/표시 주기 분리와 FSM 기반 상태 제어
 - **검증 범위:** 소스에서 주변장치 연결·호출 순서·표시/경고 조건 확인. 보드 실측 기록은 보완 필요
 
-현재 저장소는 공개 전환 준비 중입니다. 속도·거리·연료 경고는 교육용 모사이고, 상용 차량이나 전력 구동 회로 설계 경험을 뜻하지 않습니다.
+속도·거리·연료 경고는 교육용 모사이고, 상용 차량이나 전력 구동 회로 설계 경험을 뜻하지 않습니다.
+
+[저장소](https://github.com/YeongSu-Lim/Microprocess-Design) · [클러스터 코드](https://github.com/YeongSu-Lim/Microprocess-Design/blob/main/seven_segment.c) · [가속·경고등 코드](https://github.com/YeongSu-Lim/Microprocess-Design/blob/main/motor.c) · [주기·핀맵·FSM](https://github.com/YeongSu-Lim/Microprocess-Design/blob/88e1d1b408318fcafbe39d3dd402ccfeee10a7d0/docs/architecture.md) · [검증과 한계](https://github.com/YeongSu-Lim/Microprocess-Design/blob/88e1d1b408318fcafbe39d3dd402ccfeee10a7d0/docs/validation.md)
+
+상세 문서는 [Draft PR #1](https://github.com/YeongSu-Lim/Microprocess-Design/pull/1)의 고정 커밋에 연결되어 있으며, 아직 main에 병합되지 않았습니다.
 
 ### 3. Verilog 기반 Single-Cycle MIPS CPU
 
@@ -61,7 +65,7 @@ PR 병합 및 대상 파일의 main 존재를 확인한 뒤 아래 경로에서�
 변경 후: blob/main/
 대상: docs/algorithm.md, docs/validation.md, docs/versions.md
 병합 확인 후 본문의 Draft PR 및 미병합 안내도 갱신한다.
-Microprocess-Design은 Public 전환 완료를 확인한 뒤 준비된 저장소·코드·기술 문서 링크를 추가한다.
+Microprocess-Design의 docs/architecture.md와 docs/validation.md는 검토 커밋 88e1d1b408318fcafbe39d3dd402ccfeee10a7d0에 연결되어 있다.
 MCU 문서 PR도 병합 전에는 검토 커밋 링크, 병합과 파일 존재 확인 후에는 main 링크를 사용한다.
 BGR 저장소는 별도 생성 승인과 자료 공개 범위 확인 후에만 연결한다.
 -->
