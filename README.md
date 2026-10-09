@@ -13,7 +13,7 @@
 
 [저장소](https://github.com/YeongSu-Lim/Electronics-Engineering-Capstone-Design-1) · [TTC와 위험 판단](https://github.com/YeongSu-Lim/Electronics-Engineering-Capstone-Design-1/blob/3017b829014eaac35913cbde5793ea1bd3dc2542/docs/algorithm.md) · [검증 근거](https://github.com/YeongSu-Lim/Electronics-Engineering-Capstone-Design-1/blob/3017b829014eaac35913cbde5793ea1bd3dc2542/docs/validation.md) · [버전별 범위](https://github.com/YeongSu-Lim/Electronics-Engineering-Capstone-Design-1/blob/3017b829014eaac35913cbde5793ea1bd3dc2542/docs/versions.md)
 
-상세 문서는 검토 중인 문서 개선 버전입니다. 현재 main의 객체별 화면·콘솔 경고와 후속 자료의 주요 대상 선정·영상/CSV 기록·BLE용 공유 파일 구현을 구분합니다.
+상세 문서는 [Draft PR #1](https://github.com/YeongSu-Lim/Electronics-Engineering-Capstone-Design-1/pull/1)의 고정 커밋에 연결되어 있으며, 아직 main에 병합되지 않았습니다. 현재 main의 객체별 화면·콘솔 경고와 후속 자료의 주요 대상 선정·영상/CSV 기록·BLE용 공유 파일 구현을 구분합니다.
 
 ### 2. S32K144 기반 교육용 차량 전장 제어 시스템
 
@@ -22,7 +22,7 @@
 - **핵심 구현:** Embedded C · GPIO · ADC · PWM · LPIT, 제어/표시 주기 분리와 FSM 기반 상태 제어
 - **검증 범위:** 소스에서 주변장치 연결·호출 순서·표시/경고 조건 확인. 보드 실측 기록은 보완 필요
 
-현재 저장소는 비공개이며 공개 검토 중입니다. 속도·거리·연료 경고는 교육용 모사이고, 상용 차량이나 전력 구동 회로 설계 경험을 뜻하지 않습니다.
+현재 저장소는 비공개이며, 팀 공동 산출물의 공개 권한을 확인 중입니다. 속도·거리·연료 경고는 교육용 모사이고, 상용 차량이나 전력 구동 회로 설계 경험을 뜻하지 않습니다.
 
 ### 3. Verilog 기반 Single-Cycle MIPS CPU
 
@@ -52,3 +52,16 @@
 ## 추가 기술 문서 준비
 
 **GPDK045 BGR 회로설계:** 기존 보고서의 설계 판단과 시뮬레이션 결과를 정리하고 있습니다. 자료의 공개 범위를 확인한 뒤 독립 저장소와 상세 문서를 연결할 예정입니다.
+
+<!-- 링크 유지보수
+스마트 백팩의 상세 문서 3개는 Draft PR #1의 검토 커밋에 고정한다.
+PR 병합 및 대상 파일의 main 존재를 확인한 뒤 아래 경로에서만 ref를 변경한다.
+저장소: YeongSu-Lim/Electronics-Engineering-Capstone-Design-1
+변경 전: blob/3017b829014eaac35913cbde5793ea1bd3dc2542/
+변경 후: blob/main/
+대상: docs/algorithm.md, docs/validation.md, docs/versions.md
+병합 확인 후 본문의 Draft PR 및 미병합 안내도 갱신한다.
+Microprocess-Design은 공동 산출물 공개 권한 확인과 Public 전환 후 저장소 링크를 추가한다.
+MCU 문서 PR도 병합 전에는 검토 커밋 링크, 병합과 파일 존재 확인 후에는 main 링크를 사용한다.
+BGR 저장소는 별도 생성 승인과 자료 공개 범위 확인 후에만 연결한다.
+-->
