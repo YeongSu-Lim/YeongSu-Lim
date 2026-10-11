@@ -20,11 +20,11 @@
 
 - **구현:** Embedded C · ADC · FTM PWM · LPIT · FSM, 제어 10ms와 한 자리 표시 갱신 0.05ms의 타이머 채널 분리
 - **본인 기여:** 클러스터·연료 경고등 직접 구현, 가속 제어 로직 개발과 시스템 통합 참여
-- **설계·확인:** 기능별 갱신 주기를 분리하고 입출력·공유 변수 인터페이스를 점검. 코드에서 ADC→속도 상한→PWM과 표시·경고 조건 확인
+- **설계·검증:** 기능별 LPIT 채널 분리, 공유 변수 통합 및 실물 보드 D/R 클러스터 표시·모터 변수 연동 확인. 개인 최종 보고서의 표시 주기 0.5ms→2ms 조정 이력과 공개 코드 설정을 구분
 
-주기는 코드 설정값이며, 보드 실측과 상태·출력 제어의 추가 검증 범위는 상세 문서에 구분했습니다.
+공개 코드에는 제어 약 10ms·표시 약 0.05ms의 명목 설정이 있으며, 실물 시험 당시 펌웨어의 2ms 표시 조정 기록과는 버전 동일성이 확인되지 않았습니다. 시험 이력과 공개 소스의 잔여 검토 사항을 분리해 기록했습니다.
 
-[저장소](https://github.com/YeongSu-Lim/Microprocess-Design) · [클러스터 코드](https://github.com/YeongSu-Lim/Microprocess-Design/blob/main/seven_segment.c) · [가속·경고등 코드](https://github.com/YeongSu-Lim/Microprocess-Design/blob/main/motor.c) · [아키텍처·핀맵·FSM](https://github.com/YeongSu-Lim/Microprocess-Design/blob/main/docs/architecture.md) · [구현과 기여](https://github.com/YeongSu-Lim/Microprocess-Design/blob/main/docs/implementation.md) · [검증과 개선 과제](https://github.com/YeongSu-Lim/Microprocess-Design/blob/main/docs/validation.md)
+[저장소](https://github.com/YeongSu-Lim/Microprocess-Design) · [클러스터 코드](https://github.com/YeongSu-Lim/Microprocess-Design/blob/main/seven_segment.c) · [가속·경고등 코드](https://github.com/YeongSu-Lim/Microprocess-Design/blob/main/motor.c) · [아키텍처·핀맵·FSM](https://github.com/YeongSu-Lim/Microprocess-Design/blob/main/docs/architecture.md) · [구현과 기여](https://github.com/YeongSu-Lim/Microprocess-Design/blob/main/docs/implementation.md) · [실물 보드 검증 이력](https://github.com/YeongSu-Lim/Microprocess-Design/blob/main/docs/board-validation-evidence.md) · [공개 코드 검증 범위](https://github.com/YeongSu-Lim/Microprocess-Design/blob/main/docs/validation.md)
 
 ### 3. Verilog 기반 Single-Cycle MIPS CPU
 
@@ -32,9 +32,9 @@
 
 - **구현:** ALU·레지스터 파일·메모리·PC·제어부 연결, HI/LO 연산과 CP0 외부 예외 처리 경로
 - **기술 경험:** 명령어 인출부터 연산·메모리 접근·기록까지 RTL 구조 분석. 세부 모듈별 개인 담당 범위는 보완 예정
-- **확인 범위:** 소스 구조 확인. 시뮬레이션 재현 조건과 미확보 증빙은 저장소에 정리
+- **검증 결과:** 원본 통합 시뮬레이션에서 syscall에 따른 Halt 및 전체 1,646사이클 확인. R/I/J 분류 카운터 575/1,032/39의 합계도 일치. 원본 테스트벤치·명령어 파일은 저장소에 없어 재현 조건을 별도로 정리
 
-[저장소와 기술 설명](https://github.com/YeongSu-Lim/Logic-Circuit-Design) · [데이터 경로 통합 RTL](https://github.com/YeongSu-Lim/Logic-Circuit-Design/blob/main/TOP.v) · [시뮬레이션 준비와 검증 범위](https://github.com/YeongSu-Lim/Logic-Circuit-Design/blob/main/README.md)
+[저장소와 기술 설명](https://github.com/YeongSu-Lim/Logic-Circuit-Design) · [데이터 경로 통합 RTL](https://github.com/YeongSu-Lim/Logic-Circuit-Design/blob/main/TOP.v) · [원본 시뮬레이션 검증](https://github.com/YeongSu-Lim/Logic-Circuit-Design/blob/main/docs/simulation-evidence.md) · [재현 계획](https://github.com/YeongSu-Lim/Logic-Circuit-Design/blob/main/docs/verification-plan.md)
 
 ## 기술 경험
 
